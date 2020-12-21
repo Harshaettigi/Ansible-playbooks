@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: delete files
+      file: path=/var/www/html/index.html state=absent

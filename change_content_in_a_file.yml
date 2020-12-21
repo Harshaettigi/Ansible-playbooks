@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: mofify files
+      lineinfile: dest=/var/www/html/index.html regexp=^welcome line="welcome devops"

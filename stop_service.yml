@@ -1,0 +1,6 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: stop Apache
+      service: name=apache2 state=stopped enabled=yes

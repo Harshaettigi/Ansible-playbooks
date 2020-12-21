@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install packages
+      apt: name={{item}} update_cache=yes state=latest
+      with_items:
+        - nginx
+        - mysql-server
+        - mlocate
